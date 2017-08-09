@@ -8,6 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, path: "pg_config.sh"
   config.vm.box = "bento/ubuntu-16.04-i386"
+  config.vm.box_version = "= 2.3.5"
   config.vm.network "forwarded_port", guest: 5000, host: 5000
   
   # Work around disconnected virtual network cable.
